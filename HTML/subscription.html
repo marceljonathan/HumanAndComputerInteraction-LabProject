@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeTflix | Subscription</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/logo favicon.png">
+    <link rel="stylesheet" href="../CSS/subsstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body >
+    <div class="navbar">
+        <a href="../HTML/home.html"><img class="logo" src="../assets/LeTflix logo.png" alt=""></a>
+        <ul>
+            <li class="active"><a href="#">Subscription</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="../HTML/home.html">Home</a></li>
+                        <li><a href="../HTML/dramaspage.html">Dramas</a></li>
+                        <li><a href="../HTML/plans.html">Plans</a></li>
+                        <li><a href="../HTML/aboutus.html">About Us</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- <div class="search">
+            <p>Search<img src="../assets/search icon.png" alt=""></p>
+        </div> -->
+        <!-- <div class="notificon">
+            <img src="../assets/Notif icon.png" alt="">
+        </div> -->
+        <div class="login">
+            <a href="#">Login</a>
+        </div>
+    </div>
+    
+    <div class="formbox">
+        <form action="" id="form" class="kotakform">
+                <h4>Start your membership here.</br>Cancel anytime.</h4>
+                <div>
+                    <label for="">E-mail:</label>
+                    <input class="form-control" type="text" name="email">
+                </div>
+                
+                
+                <div>
+                    <label for="">Password</label>
+                    <input class="form-control" type="password" maxlength="16" name="password">
+                </div>
+
+                <div>
+                    <label for="">Gender:</label>
+                    <br>
+                    <br>
+                    <input type="radio" name="gender" value="Male" id="">Male
+                    <input class="radio-female" type="radio" name="gender" value="Female" id="">Female
+                </div>
+                <br>
+                <div>
+                    <label for="">Plan:</label>
+                    <select class="form-control" name="plan" id="">
+                        <option class="option" value="">Choose Type</option>
+                        <option class="option" value="silver">Silver</option>
+                        <option class="option" value="gold">Gold</option>
+                        <option class="option" value="diamond">diamond</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="agreement" id="">
+                    <label for="">I agree with the terms and conditions</label>
+                </div>
+                
+                <div class="errormsg" id="error"></div>
+                <br>
+                <div class="submitbutton">
+                    <input class="kumpul" type="submit" value="Submit">
+                </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="left-footer">
+            <div class="left-footer-option">
+                <a class="opt" href="../HTML/aboutus.html" target="_blank">About LeTflix</a>
+                <a class="opt" href="../HTML/plans.html" target="_blank">Subcription Plans</a>
+                <a class="opt" href="#">Term of Use</a>
+                <a class="opt" href="#">Privacy Policy</a>
+                <a class="opt" href="#">Feedback</a>
+                <a class="opt" href="#">FAQs</a>
+            </div>
+            <p class="copyright">© 2021 LeTflix. All Rights Reserved.</p>
+        </div>
+        <div class="right-footer">
+            <p>Connect with us</p>
+            <div class="sosmed">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            </div>
+        </div>
+    </div>
+    <script src="../js/subs.js"></script>
+</body>
+</html>

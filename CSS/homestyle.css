@@ -1,0 +1,962 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #0f0f1d;
+  font-family: "Roboto","HelveticaNeue-Light",sans-serif;
+    
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  color: #d9d9d8;
+  width: 100%;
+  background-image: linear-gradient(rgb(15, 15, 29, 0.9), rgb(255, 255, 255,0));
+  padding: 0 50px;
+  margin: 0cm;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 1;
+  transition: 250ms ease;
+}
+
+.navbar .logo{
+  position: absolute;
+  height: 50px;
+  width: auto;
+  left: 50px;
+  top: 15px;
+}
+
+.navbar ul{
+  display: inline-flex;
+  position: absolute;
+  left: 180px;                                       /*mainin disini untuk atur responsive*/
+  list-style: none;
+  color: #d9d9d8;
+}
+
+.navbar ul li{
+  width: 100px;
+  margin: 15px;
+  padding: 15px;
+}
+
+.navbar ul li:hover{
+  transform: scale(1.1, 1.1);
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: #d9d9d8;
+}
+
+.active{
+  background-color: #1f80e080;
+  border-radius: 100px;
+  transition: 250ms ease;
+}
+
+.sub-menu{
+  display: none;
+}
+
+.navbar ul li:hover .sub-menu{
+  display: block;
+  position: absolute;
+  left: -165px;                                       /*mainin disini untuk atur responsive*/
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+.navbar ul li:hover .sub-menu ul{
+  display: block;
+  /* margin: 10px; */
+}
+
+/* .sub-menu ul li a:hover{
+  background-color: rgba(128, 128, 243, 1);
+} */
+
+.navbar ul li:hover .sub-menu ul li{
+  width: 120px;
+  padding: 10px;
+  border-bottom: 1px dotted #d9d9d8;
+  background-color: rgba(15, 15, 29, 0.9);
+  border-radius: 0;
+  text-align: left;
+}
+
+.search img{
+  position: absolute;
+  height: 18px;
+  width: auto;
+  margin-left: 8px;
+}
+
+.search:hover{
+  transform: scale(1.1, 1.1);
+  transition: 250ms ease;
+}
+
+.notificon{
+  position: absolute;
+  top: 1px;
+  right: 128px;                                       /*mainin disini untuk atur responsive*/
+  width: 100px;
+  margin: 15px;
+  padding: 15px; 
+}
+
+.notificon img{
+  height: 18px;
+  width: auto;
+}
+
+.notificon:hover{
+  transform: scale(1.1, 1.1);
+  transition: 250ms ease;
+}
+
+.login{
+  position: absolute;
+  right: 50px;
+  border-radius: 100px;
+  border: 2px;
+  border-style: solid;
+  /* background-color: rgba(31, 127, 224, 0); */
+  border-color: rgba(31, 127, 224, 0.5);      
+  width: 100px;
+  margin: 15px;
+  padding: 15px;                                /*mainin disini untuk atur responsive*/
+}
+
+.login:hover{
+  background-color: rgba(31, 127, 224, 0.5);
+  transform: scale(1.1, 1.1);
+  transition: 250ms ease;
+}
+
+.login a{
+  text-decoration: none;
+  color: #d9d9d8;
+  font-size: 16px;
+}
+
+/* .berwarna{
+  position: fixed;
+  top: 0;
+  color: #d9d9d8;
+  width: 100%;
+  background-color: #0f0f1d;
+  padding: 0 50px;
+  margin: 0cm;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 1;
+} */
+
+/* ======================================================================================================= */
+/* Image Slider */
+.promosi-image-slider{
+  /* background-color: aqua; */
+  width: 100%;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+
+.slider{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.slider img{
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+}
+
+.arrow{
+  height: 100%;
+  padding-top: 200px;
+  z-index: 1;
+  color: #bdbdbc;
+  font-size: 60px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.arrow:hover{
+  background-color: rgb(139, 139, 139, 0.2);
+  color:white;
+  /* background-color: #8b8b8b; */
+}
+
+/* ======================================================================================================= */
+/* benefits if subscribe */
+.benefits2{
+  display: none;
+}
+
+.benefit1{
+  /* background-color: yellow; */
+  width: 100%;
+  height: 500px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 70px 45px;
+}
+
+.text1 {
+  display:flex;
+  flex-direction:column;
+  padding: 0 0 0 3rem;
+}
+
+.text1 h2{
+  font-size: 50px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.text1 h3{
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.benefit1 img{
+  width: 430px;
+  height: auto;
+}
+
+.benefit2{
+  /* background-color: yellow; */
+  width: 100%;
+  height: 500px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 70px 45px;
+}
+
+.text2 {
+  display:flex;
+  flex-direction:column;
+  padding: 0 3rem 0 0;
+}
+
+.text2 h2{
+  font-size: 3.125rem;
+  line-height: 1.1;
+  margin-bottom: .5rem;
+}
+
+.text2 h3{
+  font-size: 1.625rem;
+  font-weight: 400;
+}
+
+.benefit2 img{
+  width: 520px;
+  height: auto;
+}
+
+.benefit3{
+  width: 100%;
+  height: 500px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 70px 45px;
+}
+
+.text3 {
+  display:flex;
+  flex-direction:column;
+  padding: 0 0 0 3rem;
+}
+
+/* .text3 h2{
+  font-size: 3.125rem;
+  line-height: 1.1;
+  margin-bottom: .5rem;
+}
+
+.text3 h3{
+  font-size: 1.625rem;
+  font-weight: 400;
+} */
+
+.benefit3 img{
+  width: 500px;
+  height: auto;
+}
+
+.benefit4{
+  /* background-color: yellow; */
+  width: 100%;
+  height: 500px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 70px 45px;
+}
+
+.text4 {
+  display:flex;
+  flex-direction:column;
+  padding: 0 3rem 0 0;
+}
+
+/* .text4 h2{
+  font-size: 3.125rem;
+  line-height: 1.1;
+  margin-bottom: .5rem;
+}
+
+.text4 h3{
+  font-size: 1.625rem;
+  font-weight: 400;
+} */
+
+.benefit4 img{
+  width: 400px;
+  height: auto;
+}
+
+.subscribe-now1{
+  display: flex;
+  flex-direction: column;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 45px;
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-now1 h2{
+  font-size: 30px;
+  text-align: center;
+}
+
+.subscribe-now1 a{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  width: 180px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 100px;
+  background-color: rgba(31, 127, 224);
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.subscribe-now{
+  display: flex;
+  flex-direction: column;
+  padding:45px;
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-now h2{
+  font-size: 30px;
+  text-align: center;
+}
+
+.subscribe-now a{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  width: 180px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 100px;
+  background-color: rgba(31, 127, 224);
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+
+
+/* ======================================================================================================= */
+/* footer */
+.footer{
+  width: 100%;
+  height: 200px;
+  padding: 70px 45px 45px;
+  display: flex;
+  position: relative;
+  color: #d9d9d8;
+}
+
+.left-footer{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-footer-option a{
+  text-decoration: none;
+  color: #d9d9d8;
+}
+
+.left-footer-option a:hover{
+  color: rgba(31, 127, 224, 1);
+}
+
+.opt{
+  margin-left: 10px;
+}
+
+.copyright{
+  padding-top: 11px;
+  margin-left: 10px;
+}
+
+.right-footer{
+  width: 30%;
+  height: 20px;
+}
+
+.right-footer p{
+  font-weight: bold;
+}
+
+.right-footer a{
+  text-decoration: none;
+  color: #d9d9d8;
+  font-size: 42px;
+}
+
+.right-footer a:hover{
+  color: rgba(31, 127, 224, 1);
+}
+
+
+.section-break{
+  width: 100%;
+  height: 5px;
+  background-color: #202040;
+}
+
+@media only screen and (max-width: 1040px){
+  .promosi-image-slider{
+    height: 380px;
+  }
+
+  .arrow{
+    padding-top: 150px;
+    font-size: 55px;
+  }
+}
+
+@media only screen and (max-width: 850px){
+  .promosi-image-slider{
+    height: 340px;
+  }
+
+  .arrow{
+    padding-top: 130px;
+    font-size: 45px;
+  }
+
+  .benefit1 img{
+    width: 330px;
+    height: auto;
+  }
+
+  .benefit2 img{
+    width: 370px;
+    height: auto;
+  }
+
+  .benefit3 img{
+    width: 390px;
+    height: auto;
+  }
+
+  .benefit4 img{
+    width: 360px;
+    height: auto;
+  }
+
+  .text1 h2{
+    font-size: 45px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  
+  .text1 h3{
+    font-size: 21px;
+    font-weight: 400;
+  }
+
+  .text2 h2{
+    font-size: 45px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  
+  .text2 h3{
+    font-size: 21px;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (max-width: 705px){
+  .promosi-image-slider{
+    height: 300px;
+  }
+
+  .arrow{
+    padding-top: 120px;
+    font-size: 40px;
+  }
+
+  .benefit1 img{
+    width: 310px;
+    height: auto;
+  }
+
+  .benefit2 img{
+    width: 350px;
+    height: auto;
+  }
+
+  .benefit3 img{
+    width: 340px;
+    height: auto;
+  }
+
+  .benefit4 img{
+    width: 340px;
+    height: auto;
+  }
+
+  .text1{
+    padding: 0 0 0 25px;
+  }
+
+  .text1 h2{
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  
+  .text1 h3{
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .text2 h2{
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  
+  .text2 h3{
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (max-width: 608px){
+  .promosi-image-slider{
+    height: 300px;
+  }
+
+  .benefits1{
+    display: none;
+  }
+
+  .benefits2{
+    display: block;
+  }
+
+  .arrow{
+    padding-top: 120px;
+    font-size: 40px;
+  }
+
+  .benefit1{
+    flex-direction: column;
+  }
+
+  .benefit2{
+    flex-direction: column;
+  }
+
+  .benefit3{
+    flex-direction: column;
+  }
+
+  .benefit4{
+    flex-direction: column;
+  }
+
+  .benefit1 img{
+    width: 310px;
+    height: auto;
+  }
+
+  .benefit2 img{
+    width: 350px;
+    height: auto;
+  }
+
+  .benefit3 img{
+    width: 340px;
+    height: auto;
+  }
+
+  .benefit4 img{
+    width: 340px;
+    height: auto;
+  }
+
+  .text1{
+    margin-top: 20px;
+    padding: 0 0 0 0px;
+  }
+
+  .text1 h2{
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  .text1 h3{
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .subscribe-now{
+    display: flex;
+    flex-direction: column;
+    padding:45px;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscribe-now h2{
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .subscribe-now a{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    width: 150px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: rgba(31, 127, 224);
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  .subscribe-now1 h2{
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .subscribe-now1 a{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    width: 150px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: rgba(31, 127, 224);
+    text-decoration: none;
+    color: whitesmoke;
+  }
+}
+
+@media only screen and (max-width: 575px){
+  .promosi-image-slider{
+    height: 250px;
+  }
+
+  .arrow{
+    padding-top: 100px;
+    font-size: 40px;
+  }
+
+  .navbar{
+    height: 55px;
+  }
+  
+  .navbar .logo{
+    position: absolute;
+    height: 30px;
+    width: auto;
+    left: 50px;
+    top: 12px;
+  }
+  
+  .navbar ul{
+    left: 110px;                                       /*mainin disini untuk atur responsive*/
+  }
+  
+  .navbar ul li{
+    width: 80px;
+    margin: 10px;
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  .navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    left: -105px;                                       /*mainin disini untuk atur responsive*/
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+  
+  .login{
+    position: absolute;
+    right: 40px;
+    border-radius: 100px;
+    border: 2px;
+    border-style: solid;
+    /* background-color: rgba(31, 127, 224, 0); */
+    border-color: rgba(31, 127, 224, 0.5);      
+    width: 80px;
+    /* margin: 9px; */
+    padding: 5px;                                /*mainin disini untuk atur responsive*/
+  }
+  
+  .login a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 12px;
+  }
+
+  .footer{
+    width: 100%;
+    height: 200px;
+    padding: 30px;
+    display: flex;
+    position: relative;
+    color: #d9d9d8;
+  }
+  
+  .left-footer-option a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 12px;
+  }
+  
+  .copyright{
+    padding-top: 11px;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  
+  .right-footer p{
+    font-weight: bold;
+    font-size: 11px;
+  }
+  
+  .right-footer a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .promosi-image-slider{
+    height: 210px;
+  }
+
+  .arrow{
+    padding-top: 80px;
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 388px) {
+  .promosi-image-slider{
+    height: 160px;
+  }
+
+  .arrow{
+    padding-top: 70px;
+    font-size: 20px;
+  }
+
+  .navbar{
+    padding: 0 15px;
+    height: 30px;
+  }
+  
+  .navbar .logo{
+    position: absolute;
+    height: 17px;
+    width: auto;
+    left: 15px;
+    top: 7px;
+  }
+  
+  .navbar ul{
+    left: 50px;                                       /*mainin disini untuk atur responsive*/
+  }
+  
+  .navbar ul li{
+    width: 46px;
+    margin: 7px;
+    padding: 4px;
+    font-size: 8px;
+  }
+  
+  .navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    left: -105px;                                       /*mainin disini untuk atur responsive*/
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+  
+  .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 40px;
+    border-radius: 100px;
+    border: 2px;
+    border-style: solid;
+    /* background-color: rgba(31, 127, 224, 0); */
+    border-color: rgba(31, 127, 224, 0.5);      
+    width: 50px;
+    margin: 7px;
+    padding: 4px;                                /* mainin disini untuk atur responsive */
+  }
+  
+  .login a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 8px;
+  }
+
+  .benefit1 img{
+    width: 230px;
+    height: auto;
+  }
+
+  .benefit2 img{
+    width: 250px;
+    height: auto;
+  }
+
+  .benefit3 img{
+    width: 240px;
+    height: auto;
+  }
+
+  .benefit4 img{
+    width: 200px;
+    height: auto;
+  }
+
+  .text1{
+    margin-top: 20px;
+    padding: 0 0 0 0px;
+  }
+
+  .text1 h2{
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  .text1 h3{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .subscribe-now{
+    display: flex;
+    flex-direction: column;
+    padding:45px;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscribe-now h2{
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .subscribe-now a{
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    width: 120px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: rgba(31, 127, 224);
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  .subscribe-now1 h2{
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .subscribe-now1 a{
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    width: 120px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: rgba(31, 127, 224);
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  
+}

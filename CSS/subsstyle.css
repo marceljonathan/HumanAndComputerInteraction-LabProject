@@ -1,0 +1,670 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../assets/622655.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color:rgb(15, 15, 29);
+    font-family: "Roboto","HelveticaNeue-Light",sans-serif;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navbar{
+    top: 0;
+    color: #d9d9d8;
+    width: 100%;
+    background-image: linear-gradient(rgb(15, 15, 29), rgba(145, 130, 130, 0));
+    padding: 0 50px;
+    margin: 0cm;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+    transition: 250ms ease;
+}
+  
+.navbar .logo{
+    position: absolute;
+    height: 50px;
+    width: auto;
+    left: 50px;
+    top: 15px;
+}
+  
+.navbar ul{
+    display: inline-flex;
+    position: absolute;
+    left: 180px;                                       /*mainin disini untuk atur responsive*/
+    list-style: none;
+    color: #d9d9d8;
+}
+  
+.navbar ul li{
+    width: 116px;
+    margin: 15px;
+    padding: 15px;
+}
+  
+.navbar ul li:hover{
+    transform: scale(1.1, 1.1);
+}
+  
+.navbar ul li a{
+    text-decoration: none;
+    color: #d9d9d8;
+}
+  
+.signin{
+    color: #d9d9d8;
+}
+  
+.active{
+    background-color: rgb(31, 128, 224, 0.5);
+    border-radius: 100px;
+    transition: 250ms ease;
+}
+  
+.sub-menu{
+    display: none;
+}
+  
+.navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    left: -165px;                                       /*mainin disini untuk atur responsive*/
+    margin-top: 10px;
+    margin-left: -10px;
+}
+  
+.navbar ul li:hover .sub-menu ul{
+    display: block;
+    /* margin: 10px; */
+}
+  
+/* .sub-menu ul li a:hover{
+    background-color: rgba(128, 128, 243, 1);
+} */
+  
+.navbar ul li:hover .sub-menu ul li{
+    width: 120px;
+    padding: 10px;
+    border-bottom: 1px dotted #d9d9d8;
+    background-color: rgba(15, 15, 29, 0.9);
+    border-radius: 0;
+    text-align: left;
+}
+  
+.search img{
+    position: absolute;
+    height: 18px;
+    width: auto;
+    margin-left: 8px;
+}
+  
+.search:hover{
+    transform: scale(1.1, 1.1);
+    transition: 250ms ease;
+}
+  
+.notificon{
+    position: absolute;
+    top: 1px;
+    right: 128px;                                       /*mainin disini untuk atur responsive*/
+    width: 100px;
+    margin: 15px;
+    padding: 15px; 
+  }
+  
+  .notificon img{
+    height: 18px;
+    width: auto;
+  }
+  
+  .notificon:hover{
+    transform: scale(1.1, 1.1);
+    transition: 250ms ease;
+  }
+  
+  .login{
+    position: absolute;
+    right: 50px;
+    border-radius: 100px;
+    border: 2px;
+    border-style: solid;
+    /* background-color: rgba(31, 127, 224, 0); */
+    border-color: rgba(31, 127, 224, 0.5);      
+    width: 100px;
+    margin: 15px;
+    padding: 15px;                                /*mainin disini untuk atur responsive*/
+  }
+  
+  .login:hover{
+    background-color: rgba(31, 127, 224, 0.5);
+  }
+  
+  .login a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 16px;
+  }
+  
+  .login:hover{
+    transform: scale(1.1, 1.1);
+    transition: 250ms ease;
+  }
+  
+.berwarna{
+    position: fixed;
+    top: 0;
+    color: #d9d9d8;
+    width: 100%;
+    background-color: #0f0f1d;
+    padding: 0 50px;
+    margin: 0cm;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* ======================================================================================================= */
+/* Form registrasi */
+.kotakform h4{
+    font-size: 28px;
+    text-align: center;
+    font-family: "Roboto","HelveticaNeue-Light",sans-serif;
+    margin-bottom: 20px;
+}
+
+.link{   
+    color: #000000;
+    text-decoration: none;
+}
+
+.kotakform{
+  display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #192133;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #ffffffa8;
+}
+
+.option{
+    color: black;
+}
+
+.bg1{
+    background: url(./backgroundRegister.jpg);
+}
+
+.radio-female{
+  margin-left: 30px;
+}
+
+/* body{
+    display: flex;
+    justify-content: center;
+} */
+
+.formbox{
+    margin-top: 30px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errormsg{
+  color: red;
+}
+
+/* body{
+    display: flex;
+    justify-content: center;
+} */
+
+
+tfoot{
+    border-top: 1 px solid black;
+}
+
+.form-control{
+    padding: 8px;
+    margin: 10px 0;
+    display: block;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border-bottom: 1px solid rgba(31, 127, 224, 0.5);
+    border-right: none;
+    border-top: none;
+    border-left:none;
+    width: 100%;
+}
+
+/* .kotakform button{
+    justify-content: end;
+    align-items: center;
+} */
+
+.submitbutton{
+    display: flex;
+    justify-content: center;
+}
+
+.kumpul{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 100px;
+    border-radius: 40px;
+    background-color: rgb(31, 128, 224, 0.5);
+    color: white;
+    transition: 250ms ease;
+    border: 0;
+}
+
+.kumpul:hover{
+    transform: scale(1.1, 1.1);
+    transition: 250ms ease;
+    background-color:rgb(31, 127, 224) ;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    border: 3px solid;
+    border-color:rgb(31, 127, 224);
+}
+
+
+/* ======================================================================================================= */
+/* footer */
+.footer{
+  width: 100%;
+  height: 200px;
+  padding: 70px 45px 45px;
+  display: flex;
+  position: relative;
+  color: #d9d9d8;
+  background-color: #0f0f1d;
+}
+
+.left-footer{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-footer-option a{
+  text-decoration: none;
+  color: #d9d9d8;
+}
+
+.left-footer-option a:hover{
+  color: rgba(31, 127, 224, 1);
+}
+
+.opt{
+  margin-left: 10px;
+}
+
+.copyright{
+  padding-top: 11px;
+  margin-left: 10px;
+}
+
+.right-footer{
+  width: 30%;
+  height: 20px;
+}
+
+.right-footer p{
+  font-weight: bold;
+}
+
+.right-footer a{
+  text-decoration: none;
+  color: #d9d9d8;
+  font-size: 42px;
+}
+
+.right-footer a:hover{
+  color: rgba(31, 127, 224, 1);
+}
+  
+  
+.section-break{
+  width: 100%;
+  height: 5px;
+  background-color: rgb(32, 32, 64);
+}
+
+@media only screen and (max-width: 575px){
+  .navbar{
+    height: 55px;
+  }
+  
+  .navbar .logo{
+    position: absolute;
+    height: 30px;
+    width: auto;
+    left: 50px;
+    top: 12px;
+  }
+  
+  .navbar ul{
+    left: 110px;                                       /*mainin disini untuk atur responsive*/
+  }
+  
+  .navbar ul li{
+    width: 80px;
+    margin: 10px;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .navbar ul li:hover{
+    transform: scale(1.1, 1.1);
+  }
+  
+  .navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    left: -105px;                                       /*mainin disini untuk atur responsive*/
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+  
+  .login{
+    position: absolute;
+    right: 40px;
+    border-radius: 100px;
+    border: 2px;
+    border-style: solid;
+    /* background-color: rgba(31, 127, 224, 0); */
+    border-color: rgba(31, 127, 224, 0.5);      
+    width: 80px;
+    /* margin: 9px; */
+    padding: 5px;                                /*mainin disini untuk atur responsive*/
+  }
+  
+  .login a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 12px;
+  }
+
+  .kotakform h4{
+    font-size: 22px;
+    text-align: center;
+    font-family: "Roboto","HelveticaNeue-Light",sans-serif;
+    margin-bottom: 20px;
+}
+.kotakform{
+  display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #192133;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #ffffffa8;
+}
+.formbox{
+    margin-top: 30px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .footer{
+    width: 100%;
+    height: 200px;
+    padding: 30px;
+    display: flex;
+    position: relative;
+    color: #d9d9d8;
+  }
+  
+  .left-footer-option a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 12px;
+  }
+  
+  .copyright{
+    padding-top: 11px;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  
+  .right-footer p{
+    font-weight: bold;
+    font-size: 11px;
+  }
+  
+  .right-footer a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 388px) {
+  .navbar{
+    padding: 0 15px;
+    height: 30px;
+  }
+  
+  .navbar .logo{
+    position: absolute;
+    height: 17px;
+    width: auto;
+    left: 15px;
+    top: 7px;
+  }
+  
+  .navbar ul{
+    left: 50px;                                       /*mainin disini untuk atur responsive*/
+  }
+  
+  .navbar ul li{
+    width: 46px;
+    margin: 7px;
+    padding: 4px;
+    font-size: 8px;
+  }
+  .navbar ul li a{
+    font-size:6px;
+  }
+  
+  .navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    left: -105px;                                       /*mainin disini untuk atur responsive*/
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+  
+  .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 40px;
+    border-radius: 100px;
+    border: 2px;
+    border-style: solid;
+    /* background-color: rgba(31, 127, 224, 0); */
+    border-color: rgba(31, 127, 224, 0.5);      
+    width: 50px;
+    margin: 7px;
+    padding: 4px;                                /* mainin disini untuk atur responsive */
+  }
+  
+  .login a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 8px;
+  }
+
+  .kotakform h4{
+    font-size: 18px;
+    text-align: center;
+    font-family: "Roboto","HelveticaNeue-Light",sans-serif;
+    margin-bottom: 20px;
+  }
+
+  .kotakform{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: #192133;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #ffffffa8;
+}
+.formbox{
+    margin-top: 30px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control{
+    padding: 8px;
+    margin: 7px 0;
+    display: block;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border-bottom: 1px solid rgba(31, 127, 224, 0.5);
+    border-right: none;
+    border-top: none;
+    border-left:none;
+    width: 100%;
+}
+
+}
+
+@media only screen and (max-width: 350px) {
+  .navbar{
+    padding: 0 15px;
+    height: 30px;
+  }
+  
+  .navbar .logo{
+    position: absolute;
+    height: 17px;
+    width: auto;
+    left: 15px;
+    top: 7px;
+  }
+  
+  .navbar ul{
+    left: 50px;                                       /*mainin disini untuk atur responsive*/
+  }
+  
+  .navbar ul li{
+    width: 46px;
+    margin: 7px;
+    padding: 4px;
+    font-size: 8px;
+  }
+  .navbar ul li a{
+    font-size:6px;
+  }
+  
+  .navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    left: -105px;                                       /*mainin disini untuk atur responsive*/
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+  
+  .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 40px;
+    border-radius: 100px;
+    border: 2px;
+    border-style: solid;
+    /* background-color: rgba(31, 127, 224, 0); */
+    border-color: rgba(31, 127, 224, 0.5);      
+    width: 50px;
+    margin: 7px;
+    padding: 4px;                                /* mainin disini untuk atur responsive */
+  }
+  
+  .login a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 8px;
+  }
+
+  .kotakform h4{
+    font-size: 12px;
+    text-align: center;
+    font-family: "Roboto","HelveticaNeue-Light",sans-serif;
+    margin-bottom: 20px;
+  }
+
+  .kotakform{
+    font-size:14px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: #192133;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #ffffffa8;
+}
+.formbox{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control{
+    padding: 8px;
+    margin: 10px 0;
+    display: block;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border-bottom: 1px solid rgba(31, 127, 224, 0.5);
+    border-right: none;
+    border-top: none;
+    border-left:none;
+    width: 100%;
+}
+
+}

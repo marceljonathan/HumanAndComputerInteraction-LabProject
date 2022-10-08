@@ -1,0 +1,1405 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(15, 15, 29);
+    font-family: "Roboto","HelveticaNeue-Light",sans-serif;
+      
+}
+  
+.navbar{
+    position: fixed;
+    top: 0;
+    color: #d9d9d8;
+    width: 100%;
+    background-color: #0f0f1d;
+    padding: 0 50px;
+    margin: 0cm;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+    transition: 250ms ease;
+}
+  
+.navbar .logo{
+    position: absolute;
+    height: 50px;
+    width: auto;
+    left: 50px;
+    top: 15px;
+}
+  
+.navbar ul{
+    display: inline-flex;
+    position: absolute;
+    left: 180px;                                       /*mainin disini untuk atur responsive*/
+    list-style: none;
+    color: #d9d9d8;
+}
+  
+.navbar ul li{
+    width: 100px;
+    margin: 15px;
+    padding: 15px;
+}
+  
+.navbar ul li:hover{
+    transform: scale(1.1, 1.1);
+}
+  
+.navbar ul li a{
+    text-decoration: none;
+    color: #d9d9d8;
+}
+  
+.signin{
+    color: #d9d9d8;
+}
+  
+.active{
+    background-color: rgb(31, 128, 224, 0.5);
+    border-radius: 100px;
+    transition: 250ms ease;
+}
+  
+.sub-menu{
+    display: none;
+}
+  
+.navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    left: -165px;                                       /*mainin disini untuk atur responsive*/
+    margin-top: 10px;
+    margin-left: -10px;
+}
+  
+.navbar ul li:hover .sub-menu ul{
+    display: block;
+    /* margin: 10px; */
+}
+  
+/* .sub-menu ul li a:hover{
+    background-color: rgba(128, 128, 243, 1);
+} */
+  
+.navbar ul li:hover .sub-menu ul li{
+    width: 120px;
+    padding: 10px;
+    border-bottom: 1px dotted #d9d9d8;
+    background-color: rgba(15, 15, 29, 0.9);
+    border-radius: 0;
+    text-align: left;
+}
+  
+.search img{
+    position: absolute;
+    height: 18px;
+    width: auto;
+    margin-left: 8px;
+}
+  
+.search:hover{
+    transform: scale(1.1, 1.1);
+    transition: 250ms ease;
+}
+  
+.notificon{
+    position: absolute;
+    top: 1px;
+    right: 128px;                                       /*mainin disini untuk atur responsive*/
+    width: 100px;
+    margin: 15px;
+    padding: 15px; 
+  }
+  
+  .notificon img{
+    height: 18px;
+    width: auto;
+  }
+  
+  .notificon:hover{
+    transform: scale(1.1, 1.1);
+    transition: 250ms ease;
+  }
+  
+  .login{
+    position: absolute;
+    right: 50px;
+    border-radius: 100px;
+    border: 2px;
+    border-style: solid;
+    /* background-color: rgba(31, 127, 224, 0); */
+    border-color: rgba(31, 127, 224, 0.5);      
+    width: 100px;
+    margin: 15px;
+    padding: 15px;                                /*mainin disini untuk atur responsive*/
+  }
+  
+  .login:hover{
+    background-color: rgba(31, 127, 224, 0.5);
+  }
+  
+  .login a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 16px;
+  }
+  
+  .login:hover{
+    transform: scale(1.1, 1.1);
+    transition: 250ms ease;
+  }
+  
+.berwarna{
+    position: fixed;
+    top: 0;
+    color: #d9d9d8;
+    width: 100%;
+    background-color: #0f0f1d;
+    padding: 0 50px;
+    margin: 0cm;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* ======================================================================================================= */
+.information{
+  display: flex;
+  color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 350px;
+  margin-bottom: 40px;
+}
+
+.textaboutus{
+  display: flex;
+  /* justify-content:center;
+  align-items: center; */
+}
+
+.aboutustitle{
+    width: 50%;
+    background-image: url(../assets/030784500_1590462982-Bioskop_Cinema_XXI.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutustitle h1{
+    font-size: 72px;
+}
+
+.aboutuscontent{
+    width: 50%;
+    padding-left: 30px;
+    padding-bottom: 40px;
+}
+
+.aboutuscontent p{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.letflix-ceo{
+  color:white;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 40px;
+  display: flex;
+  height:75vh;
+  margin-bottom: 40px;
+}
+
+.ourceo{
+  display:flex;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.kerling{
+    padding-right: 30px;
+    padding-bottom: 40px;
+}
+
+.kerling p{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.ourceo-title{
+  width: 50%;
+  color: rgb(0, 0, 0);
+  background-image: url(../assets/ceo-pict.png);
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.ourceo-title h1{
+    font-size: 53px;
+}
+
+.name{
+  display:flex;
+  margin-left:30px;
+    font-size: 42px;
+}
+
+.kerling{
+    width: 50%;
+}
+
+.jonathan{
+  border-radius: 20px;
+  width:auto;
+  height: 400px
+}
+
+.comp-culture{
+    color: white;
+}
+
+.comp-culture-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comp-culture-title h1{
+    font-size: 45px;
+}
+
+.letculttext{
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 30px;
+}
+
+.letculttext p{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.investor-relation{
+    color: white;
+}
+
+.investortitle{
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.stock{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.stocktitle{
+    background-image: url(../assets/NASDAQ_stock_market_display-98fb86e5dbba4295810cec107ed70123.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stocktitle h1{
+  font-size:48px;
+}
+
+.stock-information{
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.stock-information h1{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom:3px;
+}
+
+.stock-information h2{
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.stock-information h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom:2px;
+}
+
+.stock-information p{
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    color: #535353;
+}
+
+.stats{
+    color: #009900;
+}
+
+.investblock{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.investblock div{
+  width:620px;
+  height:300px;
+  border:solid 3px rgb(118, 118, 136);
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color:rgb(71, 71, 99);
+}
+
+.update1 h2{
+  font-size:30px;
+  color:rgb(201, 217, 241);
+  margin-top:30px;
+  display:flex;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.update1 h3{
+  display:flex;
+  align-items: flex-end;
+  margin-left: 50px;
+}
+
+.report-title{
+    margin-bottom: 20px;
+}
+
+.report-title h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+  display:flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.career-button{
+    display:flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 150px;
+  }
+
+.button-all{
+    display:flex;
+    justify-content: center;
+    background-color: rgb(31, 127, 224);
+    border-radius: 50px;
+    border: 2px;
+    border-style: solid;   
+    border-color: rgb(31, 127, 224);
+    width: 180px;
+    padding: 15px;
+}
+
+.career-button-all{
+    display:flex;
+    justify-content: center;
+    background-color: rgb(31, 127, 224);
+    border-radius: 50px;
+    border: 2px;
+    border-style: solid;   
+    border-color: rgb(31, 127, 224);
+    width: 280px;
+    padding: 15px;
+}
+
+.career-button-all a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+}
+
+.button-all a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+}
+
+.button-all:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.career-button-all:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.career{
+    color: white;
+    width: 100%;
+}
+
+.career-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title h1{
+    font-size: 45px;
+}
+
+.sec-title h3{
+    font-size: 30px;
+}
+
+.careertitle{
+  font-size: 42px;
+  display: flex;
+  margin-left: 50px;
+  margin-right: 20px;
+}
+
+.careerinfo{
+  display: flex;
+  padding-right: 100px;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 20px;
+  line-height: 24px;
+}
+
+.career-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.career-1-img img{
+    width: 350px;
+    height: auto;
+}
+
+.career-text{
+    width: 50%;
+}
+
+.career-1-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.career-2-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.career-2-img img{
+    width: 450px;
+    height: auto;
+}
+
+.career-3-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.career-3-img img{
+    width: 350px;
+    height: auto;
+}
+
+
+
+
+
+
+
+.about-us2{
+  display: none;
+}
+
+.information2{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  /* height: 350px; */
+  margin-bottom: 40px;
+}
+
+.textaboutus2{
+  display: flex;
+  /* justify-content:center;
+  align-items: center; */
+}
+
+.aboutustitle2{
+    background-image: url(../assets/030784500_1590462982-Bioskop_Cinema_XXI.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+}
+
+.aboutustitle2 h1{
+    font-size: 60px;
+}
+
+.aboutuscontent2{
+  margin-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+.aboutuscontent2 p{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.letflix-ceo2{
+  color:white;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.ourceo2{
+  display:flex;
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.kerling2{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.kerling2 p{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.ourceo-title2{
+  color: rgb(0, 0, 0);
+  background-image: url(../assets/ceo-pict.png);
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 380px;
+}
+
+.ourceo-title2 h1{
+    font-size: 46px;
+}
+
+.comp-culture2{
+    color: white;
+}
+
+.comp-culture-title2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comp-culture-title2 h1{
+    font-size: 40px;
+}
+
+.letculttext2{
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 30px;
+}
+
+.letculttext2 p{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.investor-relation{
+    color: white;
+}
+
+.investortitle{
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.stock2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.stocktitle2{
+    background-image: url(../assets/NASDAQ_stock_market_display-98fb86e5dbba4295810cec107ed70123.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.stocktitle2 h1{
+  font-size:36px;
+}
+
+.stock-information2{
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.stock-information2 h1{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom:3px;
+}
+
+.stock-information2 h2{
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.stock-information2 h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom:2px;
+}
+
+.stock-information2 p{
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    color: #535353;
+}
+
+.stats2{
+    color: #009900;
+}
+
+.investblock2{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.investblock2 div{
+  width:620px;
+  height:300px;
+  border:solid 3px rgb(118, 118, 136);
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color:rgb(71, 71, 99);
+}
+
+.update2 h2{
+  font-size:20px;
+  color:rgb(201, 217, 241);
+  margin-top:30px;
+  display:flex;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.update2 h3{
+  font-size: 16px;
+  display:flex;
+  align-items: flex-end;
+  margin-left: 10px;
+}
+
+.report-title{
+    margin-bottom: 20px;
+}
+
+.report-title h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+  display:flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.career-button{
+    display:flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 150px;
+  }
+
+.button-all{
+    display:flex;
+    justify-content: center;
+    background-color: rgb(31, 127, 224);
+    border-radius: 50px;
+    border: 2px;
+    border-style: solid;   
+    border-color: rgb(31, 127, 224);
+    width: 180px;
+    padding: 15px;
+}
+
+.career-button-all{
+    display:flex;
+    justify-content: center;
+    background-color: rgb(31, 127, 224);
+    border-radius: 50px;
+    border: 2px;
+    border-style: solid;   
+    border-color: rgb(31, 127, 224);
+    width: 280px;
+    padding: 15px;
+}
+
+.career-button-all a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+}
+
+.button-all a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+}
+
+.button-all:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.career-button-all:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.career{
+    color: white;
+    width: 100%;
+}
+
+.career-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title h1{
+    font-size: 45px;
+}
+
+.sec-title2 h3{
+  margin-left: 40px;
+  margin-right: 40px;
+    font-size: 22px;
+}
+
+.career-text2{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.careertitle2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 40px;
+  display: flex;
+}
+
+.careerinfo2{
+  display: flex;
+  /* padding-right: 100px; */
+  justify-content: center;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.career-12{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.career-12-img img{
+    width: 350px;
+    height: auto;
+}
+
+.career-12-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.career-22-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.career-22-img img{
+    width: 450px;
+    height: auto;
+}
+
+.career-32-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.career-32-img img{
+    width: 350px;
+    height: auto;
+}
+
+/* ======================================================================================================= */
+/* footer */
+.footer{
+    width: 100%;
+    height: 200px;
+    padding: 70px 45px 45px;
+    display: flex;
+    position: relative;
+    color: #d9d9d8;
+}
+  
+.left-footer{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+  
+.left-footer-option a{
+    text-decoration: none;
+    color: #d9d9d8;
+}
+  
+.left-footer-option a:hover{
+    color: rgba(31, 127, 224, 1);
+}
+  
+.opt{
+    margin-left: 10px;
+}
+  
+.copyright{
+    padding-top: 11px;
+    margin-left: 10px;
+}
+  
+.right-footer{
+  width: 30%;
+  height: 20px;
+}
+
+.right-footer p{
+  font-weight: bold;
+}
+
+.right-footer a{
+  text-decoration: none;
+  color: #d9d9d8;
+  font-size: 42px;
+}
+
+.right-footer a:hover{
+  color: rgba(31, 127, 224, 1);
+}
+
+.section-break{
+  width: 100%;
+  height: 5px;
+  background-color: rgb(32, 32, 64);
+}
+
+@media only screen and (max-width: 964px){
+  .ourceo-title h1{
+    font-size: 40px;
+  }
+
+  .update1 h2{
+    font-size:26px;
+    color:rgb(201, 217, 241);
+    margin-top:30px;
+    display:flex;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .update1 h3{
+    display:flex;
+    align-items: flex-end;
+    margin-left: 50px;
+    font-size: 16px;
+  }
+
+  .stocktitle h1{
+    font-size:35px;
+  }
+
+  .aboutustitle h1{
+    font-size: 56px;
+  }
+
+  .career-1-img img{
+    width: 320px;
+    height: auto;
+  }
+
+  .career-2-img img{
+    width: 420px;
+    height: auto;
+  }
+
+  .career-3-img img{
+    width: 320px;
+    height: auto;
+  }
+
+  .careerinfo{
+    padding-right: 50px;
+  }
+}
+
+@media only screen and (max-width: 858px){
+  .update1 h2{
+    font-size:22px;
+    color:rgb(201, 217, 241);
+    margin-top:30px;
+    display:flex;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .update1 h3{
+    display:flex;
+    align-items: flex-end;
+    margin-left: 50px;
+    font-size: 13px;
+  }
+
+  .stocktitle h1{
+    font-size:35px;
+  }
+
+  .aboutustitle h1{
+    font-size: 56px;
+  }
+
+  .career-1-img img{
+    width: 270px;
+    height: auto;
+  }
+
+  .career-2-img img{
+    width: 370px;
+    height: auto;
+  }
+
+  .career-3-img img{
+    width: 270px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 766px){
+  .information{
+    display: flex;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 350px;
+    margin-bottom: 40px;
+  }
+  
+  .aboutustitle{
+      width: 50%;
+      background-image: url(../assets/030784500_1590462982-Bioskop_Cinema_XXI.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .aboutustitle h1{
+      font-size: 48px;
+  }
+  
+  .aboutuscontent{
+      width: 50%;
+      padding-left: 30px;
+      padding-bottom: 40px;
+  }
+  
+  .aboutuscontent p{
+      font-size: 16px;
+  }
+
+  .letflix-ceo{
+    height: 65vh;
+  }
+
+  .ourceo-title h1{
+    font-size: 30px;
+  }
+
+  .ourceo{
+    font-size: 40px;
+  }
+
+  .kerling p{
+    font-size: 16px;
+  }
+
+  .comp-culture-title{
+    font-size: 40px;
+  }
+
+  .letculttext p{
+    font-size: 16px;
+  }
+
+  .investblock div{
+    width:520px;
+    height:300px;
+    border:solid 3px rgb(118, 118, 136);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color:rgb(71, 71, 99);
+  }
+
+  .update1 h2{
+    font-size:22px;
+    color:rgb(201, 217, 241);
+    margin-top:30px;
+    display:flex;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .update1 h3{
+    display:flex;
+    align-items: flex-end;
+    margin-left: 20px;
+    font-size: 13px;
+  }
+
+  .investortitle{
+    font-size: 40px;
+  }
+
+  .stocktitle h1{
+    font-size:30px;
+  }
+
+  .career-2-img img{
+    width: 300px;
+    height: auto;
+  }
+
+  .careerinfo{
+    padding-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 625px){
+  .about-us{
+    display: none;
+  }
+
+  .about-us2{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 469px){
+  .career-12-img img{
+    width: 270px;
+    height: auto;
+  }
+
+  .career-22-img img{
+      width: 320px;
+      height: auto;
+  }
+
+  .career-32-img img{
+      width: 270px;
+      height: auto;
+  }
+
+  .investblock2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .investblock2 div{
+    width:65%;
+    height:200px;
+    border:solid 3px rgb(118, 118, 136);
+    border-radius: 10px;
+    background-color:rgb(71, 71, 99);
+    margin-bottom: 20px;
+  }
+  
+  .update2 h2{
+    font-size:20px;
+    color:rgb(201, 217, 241);
+    margin-top:30px;
+    display:flex;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .update2 h3{
+    font-size: 16px;
+    display:flex;
+    align-items: flex-end;
+    margin-left: 10px;
+  }
+
+  .careertitle2{
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 575px){
+  .navbar{
+    height: 55px;
+  }
+  
+  .navbar .logo{
+    position: absolute;
+    height: 30px;
+    width: auto;
+    left: 50px;
+    top: 12px;
+  }
+  
+  .navbar ul{
+    left: 110px;                                       /*mainin disini untuk atur responsive*/
+  }
+  
+  .navbar ul li{
+    width: 80px;
+    margin: 10px;
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  .navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    left: -105px;                                       /*mainin disini untuk atur responsive*/
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+  
+  .login{
+    position: absolute;
+    right: 40px;
+    border-radius: 100px;
+    border: 2px;
+    border-style: solid;
+    /* background-color: rgba(31, 127, 224, 0); */
+    border-color: rgba(31, 127, 224, 0.5);      
+    width: 80px;
+    /* margin: 9px; */
+    padding: 5px;                                /*mainin disini untuk atur responsive*/
+  }
+  
+  .login a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 12px;
+  }
+
+  .footer{
+    width: 100%;
+    height: 200px;
+    padding: 30px;
+    display: flex;
+    position: relative;
+    color: #d9d9d8;
+  }
+  
+  .left-footer-option a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 12px;
+  }
+  
+  .copyright{
+    padding-top: 11px;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  
+  .right-footer p{
+    font-weight: bold;
+    font-size: 11px;
+  }
+  
+  .right-footer a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 27px;
+  }
+
+  .report-title h1{
+    font-size: 23px;
+  }
+
+  .ourceo-title2 h1{
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 388px) {
+  .navbar{
+    padding: 0 15px;
+    height: 30px;
+  }
+  
+  .navbar .logo{
+    position: absolute;
+    height: 17px;
+    width: auto;
+    left: 15px;
+    top: 7px;
+  }
+  
+  .navbar ul{
+    left: 50px;                                       /*mainin disini untuk atur responsive*/
+  }
+  
+  .navbar ul li{
+    width: 46px;
+    margin: 7px;
+    padding: 4px;
+    font-size: 8px;
+  }
+  
+  .navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    left: -105px;                                       /*mainin disini untuk atur responsive*/
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+  
+  .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 40px;
+    border-radius: 100px;
+    border: 2px;
+    border-style: solid;
+    /* background-color: rgba(31, 127, 224, 0); */
+    border-color: rgba(31, 127, 224, 0.5);      
+    width: 50px;
+    margin: 7px;
+    padding: 4px;                                /* mainin disini untuk atur responsive */
+  }
+  
+  .login a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 8px;
+  }
+
+  .stocktitle2 h1{
+    font-size: 30px;
+  }
+}

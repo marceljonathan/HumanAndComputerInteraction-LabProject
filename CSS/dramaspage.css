@@ -1,0 +1,685 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: rgb(15, 15, 29);
+  font-family: "Roboto","HelveticaNeue-Light",sans-serif;
+    
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  color: #d9d9d8;
+  width: 100%;
+  background-image: linear-gradient(rgb(15, 15, 29, 0.9), rgb(255, 255, 255,0));
+  padding: 0 50px;
+  margin: 0cm;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 1;
+  transition: 250ms ease;
+}
+
+.navbar .logo{
+  position: absolute;
+  height: 50px;
+  width: auto;
+  left: 50px;
+  top: 15px;
+}
+
+.navbar ul{
+  display: inline-flex;
+  position: absolute;
+  left: 180px;                                       /*mainin disini untuk atur responsive*/
+  list-style: none;
+  color: #d9d9d8;
+}
+
+.navbar ul li{
+  width: 100px;
+  margin: 15px;
+  padding: 15px;
+}
+
+.navbar ul li:hover{
+  transform: scale(1.1, 1.1);
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: #d9d9d8;
+}
+
+.active{
+  background-color: rgba(31, 128, 224, 0.5);
+  border-radius: 100px;
+  transition: 250ms ease;
+}
+
+.sub-menu{
+  display: none;
+}
+
+.navbar ul li:hover .sub-menu{
+  display: block;
+  position: absolute;
+  left: -165px;                                       /*mainin disini untuk atur responsive*/
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+.navbar ul li:hover .sub-menu ul{
+  display: block;
+  /* margin: 10px; */
+}
+
+/* .sub-menu ul li a:hover{
+  background-color: rgba(128, 128, 243, 1);
+} */
+
+.navbar ul li:hover .sub-menu ul li{
+  width: 120px;
+  padding: 10px;
+  border-bottom: 1px dotted #d9d9d8;
+  background-color: rgba(15, 15, 29, 0.9);
+  border-radius: 0;
+  text-align: left;
+}
+
+.searchtext-icon{
+  position: absolute;
+  height: 18px;
+  width: auto;
+  margin-left: 8px;
+}
+
+.searchicon{
+  top: 31px;
+  position: absolute;
+  height: 18px;
+  width: auto;
+  margin-left: 8px;
+  right: 255px;
+}
+
+.searchicon{
+  display: none;
+}
+
+.search:hover{
+  transform: scale(1.1, 1.1);
+  transition: 250ms ease;
+}
+
+.notificon{
+  position: absolute;
+  top: 31px;
+  right: 190px;                                       /*mainin disini untuk atur responsive*/
+}
+
+.notificon img{
+  height: 18px;
+  width: auto;
+}
+
+.notificon:hover{
+  transform: scale(1.1, 1.1);
+  transition: 250ms ease;
+}
+
+.login{
+  position: absolute;
+  right: 50px;
+  border-radius: 100px;
+  border: 2px;
+  border-style: solid;
+  /* background-color: rgba(31, 127, 224, 0); */
+  border-color: rgba(31, 127, 224, 0.5);      
+  width: 100px;
+  margin: 15px;
+  padding: 15px;                                /*mainin disini untuk atur responsive*/
+}
+
+.login:hover{
+  background-color: rgba(31, 127, 224, 0.5);
+  transform: scale(1.1, 1.1);
+  transition: 250ms ease;
+}
+
+.login a{
+  text-decoration: none;
+  color: #d9d9d8;
+  font-size: 16px;
+}
+
+/* .berwarna{
+  position: fixed;
+  top: 0;
+  color: #d9d9d8;
+  width: 100%;
+  background-color: #0f0f1d;
+  padding: 0 50px;
+  margin: 0cm;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 1;
+} */
+
+/* ======================================================================================================= */
+/* Image Slider */
+.promosi-image-slider{
+  /* background-color: aqua; */
+  width: 100%;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+
+.slider{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.slider img{
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+}
+
+.arrow{
+  height: 100%;
+  padding-top: 200px;
+  z-index: 1;
+  color: #bdbdbc;
+  font-size: 60px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.arrow:hover{
+  background-color: rgb(139, 139, 139, 0.2);
+  color:white;
+  /* background-color: #8b8b8b; */
+}
+
+/* ======================================================================================================= */
+/* konten */
+.konten{
+  display: flex;
+  color:#d9d9d8;
+  flex-direction: column;
+}
+
+.contenttitle{
+  display: flex;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.titledrama{
+  width: 50%;
+  margin-top:20px ;
+  margin-bottom: 20px;
+}
+
+.seemore{
+  width: 50%;
+  display: flex;
+  margin-top: 10px;
+  justify-content:  flex-end;
+  align-items: center;
+}
+
+.seemore a{
+  text-decoration: none;
+  color: #d9d9d8;
+}
+
+.seemore a:hover{
+  color: rgba(31, 127, 224);
+}
+
+.d1{
+  /* height: 100%; */
+  padding-left: 35px;
+  padding-right: 35px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.d1-img img{
+  border-radius: 10px;
+  width: 160px;
+  height: 240px;
+}
+
+.d1 img:hover{
+  transform: scale(1.1, 1.1);
+}
+
+/* ======================================================================================================= */
+/* footer */
+.footer{
+  width: 100%;
+  height: 200px;
+  padding: 70px 45px 45px;
+  display: flex;
+  position: relative;
+  color: #d9d9d8;
+}
+
+.left-footer{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-footer-option a{
+  text-decoration: none;
+  color: #d9d9d8;
+}
+
+.left-footer-option a:hover{
+  color: rgba(31, 127, 224, 1);
+}
+
+.opt{
+  margin-left: 10px;
+}
+
+.copyright{
+  padding-top: 11px;
+  margin-left: 10px;
+}
+
+.right-footer{
+  width: 30%;
+  height: 20px;
+}
+
+.right-footer p{
+  font-weight: bold;
+}
+
+.right-footer a{
+  text-decoration: none;
+  color: #d9d9d8;
+  font-size: 42px;
+}
+
+.right-footer a:hover{
+  color: rgba(31, 127, 224, 1);
+}
+
+
+
+
+@media only screen and (max-width: 1040px) {
+  .d1-img img{
+    width: 120px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 965px) {
+  .d1-img img{
+    width: 100px;
+    height: auto;
+  }
+
+  .titledrama h1{
+    font-size: 20px;
+  }
+
+  .seemore a{
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 806px) {
+  .d1-img img{
+    width: 90px;
+    height: auto;
+  }
+
+  .titledrama h1{
+    font-size: 20px;
+  }
+
+  .seemore a{
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 695px) {
+  .d1-img img{
+    width: 70px;
+    height: auto;
+  }
+
+  .titledrama h1{
+    font-size: 20px;
+  }
+
+  .seemore a{
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .d1-img img{
+    width: 60px;
+    height: auto;
+  }
+
+  .titledrama h1{
+    font-size: 15px;
+  }
+
+  .seemore a{
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 506px) {
+  .d1-img img{
+    width: 50px;
+    height: auto;
+    border-radius: 7px;
+  }
+
+  .titledrama h1{
+    font-size: 15px;
+  }
+
+  .seemore a{
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .d1-img img{
+    width: 30px;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .titledrama h1{
+    font-size: 12px;
+  }
+
+  .seemore a{
+    font-size: 8px;
+  }
+}
+
+
+@media only screen and (max-width: 1040px){
+  .promosi-image-slider{
+    height: 380px;
+  }
+
+  .arrow{
+    padding-top: 150px;
+    font-size: 55px;
+  }
+}
+
+@media only screen and (max-width: 850px){
+  .promosi-image-slider{
+    height: 340px;
+  }
+
+  .arrow{
+    padding-top: 130px;
+    font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 765px){
+  .searchicon{
+    display: block;
+    right: 230px;
+  }
+
+  .notificon{
+    right: 190px;
+  }
+
+  .searchtext{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 705px){
+  .promosi-image-slider{
+    height: 300px;
+  }
+
+  .arrow{
+    padding-top: 120px;
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 575px){
+  .promosi-image-slider{
+    height: 250px;
+  }
+
+  .arrow{
+    padding-top: 100px;
+    font-size: 40px;
+  }
+
+  .navbar{
+    height: 55px;
+  }
+  
+  .navbar .logo{
+    position: absolute;
+    height: 30px;
+    width: auto;
+    left: 50px;
+    top: 12px;
+  }
+  
+  .navbar ul{
+    left: 110px;                                       /*mainin disini untuk atur responsive*/
+  }
+  
+  .navbar ul li{
+    width: 80px;
+    margin: 10px;
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  .navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    left: -105px;                                       /*mainin disini untuk atur responsive*/
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+
+  .searchicon{
+    top: 23px;
+    right: 180px;
+    height: 12px;
+    width: auto;
+  }
+
+  .notificon{
+    top: 20px;
+    right: 150px;
+    height: 7px;
+  }
+
+  .notificon img{
+    height: 12px;
+    width: auto;
+  }
+  
+  .login{
+    position: absolute;
+    right: 40px;
+    border-radius: 100px;
+    border: 2px;
+    border-style: solid;
+    /* background-color: rgba(31, 127, 224, 0); */
+    border-color: rgba(31, 127, 224, 0.5);      
+    width: 80px;
+    /* margin: 9px; */
+    padding: 3px;                                /*mainin disini untuk atur responsive*/
+  }
+  
+  .login a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 12px;
+  }
+
+  .footer{
+    width: 100%;
+    height: 200px;
+    padding: 30px;
+    display: flex;
+    position: relative;
+    color: #d9d9d8;
+  }
+  
+  .left-footer-option a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 12px;
+  }
+  
+  .copyright{
+    padding-top: 11px;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  
+  .right-footer p{
+    font-weight: bold;
+    font-size: 11px;
+  }
+  
+  .right-footer a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .promosi-image-slider{
+    height: 210px;
+  }
+
+  .arrow{
+    padding-top: 80px;
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .promosi-image-slider{
+    height: 160px;
+  }
+
+  .arrow{
+    padding-top: 70px;
+    font-size: 20px;
+  }
+
+  .navbar{
+    padding: 0 15px;
+    height: 30px;
+  }
+  
+  .navbar .logo{
+    position: absolute;
+    height: 17px;
+    width: auto;
+    left: 15px;
+    top: 7px;
+  }
+  
+  .navbar ul{
+    left: 50px;                                       /*mainin disini untuk atur responsive*/
+  }
+  
+  .navbar ul li{
+    width: 46px;
+    margin: 7px;
+    padding: 4px;
+    font-size: 8px;
+  }
+  
+  .navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    left: -105px;                                       /*mainin disini untuk atur responsive*/
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+
+  .searchicon{
+    top: 12px;
+    right: 120px;
+    height: 7px;
+    width: auto;
+  }
+
+  .notificon{
+    top: 4px;
+    right: 105px;
+    height: 7px;
+  }
+
+  .notificon img{
+    height: 7px;
+    width: auto;
+  }
+  
+  .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 40px;
+    border-radius: 100px;
+    border: 2px;
+    border-style: solid;
+    /* background-color: rgba(31, 127, 224, 0); */
+    border-color: rgba(31, 127, 224, 0.5);      
+    width: 50px;
+    margin: 7px;
+    padding: 4px;                                /* mainin disini untuk atur responsive */
+  }
+  
+  .login a{
+    text-decoration: none;
+    color: #d9d9d8;
+    font-size: 8px;
+  }
+}
